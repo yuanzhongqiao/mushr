@@ -1,58 +1,65 @@
-![no image](https://github.com/prl-mushr/mushr/blob/master/header.jpg)
-# MuSHR
-Multi-agent System for non-Holonomic Racing
-
-This is the main repository for MuSHR.
-- [About MuSHR](https://mushr.io/about/)
-- [System Overview](https://mushr.io/tutorials/overview/)
-- [Build Instructions](https://mushr.io/hardware/build_instructions/)
-- [Simulation Quickstart](https://mushr.io/tutorials/quickstart/)
-- [Community Page](https://github.com/prl-mushr/mushr/discussions)
-
-Components are listed below. Note not all components are installed by default. For install and running various components we recommend following our [tutorials](https://mushr.io/tutorials/) also individually linked with each component:
-
-## Basic
-- [`mushr_docs`](https://github.com/prl-mushr/mushr/tree/master/mushr_docs): Install and hardware related docs. Component documentation found with each component
-- [`mushr_base`](https://github.com/prl-mushr/mushr_base): Scripts that ties all mushr components together.
-
-## Simulation
-- [`mushr_sim`](https://github.com/prl-mushr/mushr_sim): MuSHR's main simulator
-- [`mushr_mujoco_ros`](https://github.com/prl-mushr/mushr_mujoco_ros): MuSHR's mujoco simulator.
-- [`gym-donkeycar`](https://github.com/prl-mushr/gym-donkeycar): MuSHR version of the Donkeycar simulator
-
-## Hardware
-- [`mushr_hardware`](https://github.com/prl-mushr/mushr/tree/master/mushr_hardware/mushr_hardware): launchfiles for running the car and location for installed hardware packages
-- [`mushr_description`](https://github.com/prl-mushr/mushr/tree/master/mushr_description): Official meshes, stl files, and urdf's for each mushr platform. Also contains description of kinematic car model
-- [`mushr_cad`](https://github.com/prl-mushr/mushr_cad): CAD files for all versions of the MuSHR car
-- [`push_button_utils`](https://github.com/prl-mushr/push_button_utils): ROS node interface for front bumper
-- [`vesc`](https://github.com/prl-mushr/vesc): Code for communicating with the MuSHR car's VESC
-- [`ydlidar`](https://github.com/prl-mushr/ydlidar): Package that contains all code for the laser scanner
-- [`Realsense`](https://github.com/IntelRealSense/realsense-ros): External package for interfacing withe realsense camera
-
-## Utils and Development Tools
-- [`devtools`](https://github.com/prl-mushr/devtools): Development tools for linting and contributing to MuSHR
-- [`mushr_utils`]( https://github.com/prl-mushr/mushr/tree/master/mushr_utils
-): install scripts, rviz setup files, and other utils for running various tasks
-
-## Autonomous Navigation
-- [`mushr_pf`](https://github.com/prl-mushr/mushr_pf): The MuSHR particle filter used for localization in a known map.
-- [`mushr_pf.jl`](https://github.com/prl-mushr/mushr_pf.jl): Another MuSHR particle filter written in julia
-- [`mushr_rhc`](https://github.com/prl-mushr/mushr_rhc): The MuSHR receding horizon controller for navigation in a known map.
-- [`mushr_gp`](https://github.com/prl-mushr/mushr_gp): The MuSHR global planner, for planning in a known map.
-
-## Machine Learning
-- [`mushr-dl`](https://github.com/prl-mushr/MUSHR-DL): A deep learning stack for reinforcement learning in the donkey sim
-
-## FAQ
-
-- **How do I get started?!**  
-Visit our [website](https://mushr.io)! We have an ever-growing list of tutorials and build instructions there.
-
-- **Who can use MuSHR?**  
-This project is intended for students and researchers at the undergraduate and graduate level, but that doesn't mean you can't do it! We welcome motivated high school students, and makers to try out the platform too. You will need familiarity with the linux terminal, python, and general building skills. No soldering skills are required to build the platform.
-
-## Acknowledgements
-This project is from the [Personal Robotics Lab](https://personalrobotics.cs.washington.edu/) at the [University of Washington Paul G. Allen School of Computer Science](https://www.cs.washington.edu/). 
-
-**Advisor:** [Sidd Srinivasa](https://goodrobot.ai/)  
-**[PRL Team](https://personalrobotics.cs.washington.edu/people/)**
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/prl-mushr/mushr/blob/master/header.jpg"><img src="https://github.com/prl-mushr/mushr/raw/master/header.jpg" alt="没有图像" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">穆SHR</font></font></h1><a id="user-content-mushr" class="anchor-element" aria-label="永久链接： MuSHR" href="#mushr"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">非完整赛车的多智能体系统</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是 MuSHR 的主要存储库。</font></font></p>
+<ul dir="auto">
+<li><a href="https://mushr.io/about/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关于MuSHR</font></font></a></li>
+<li><a href="https://mushr.io/tutorials/overview/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">系统总览</font></font></a></li>
+<li><a href="https://mushr.io/hardware/build_instructions/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建说明</font></font></a></li>
+<li><a href="https://mushr.io/tutorials/quickstart/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模拟快速入门</font></font></a></li>
+<li><a href="https://github.com/prl-mushr/mushr/discussions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区页面</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下面列出了组件。</font><font style="vertical-align: inherit;">请注意，并非所有组件都是默认安装的。</font><font style="vertical-align: inherit;">为了安装和运行各种组件，我们建议遵循我们的</font></font><a href="https://mushr.io/tutorials/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">教程，</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该教程还单独链接到每个组件：</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基本的</font></font></h2><a id="user-content-basic" class="anchor-element" aria-label="永久链接：基本" href="#basic"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://github.com/prl-mushr/mushr/tree/master/mushr_docs"><code>mushr_docs</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：安装和硬件相关文档。</font><font style="vertical-align: inherit;">每个组件都有组件文档</font></font></li>
+<li><a href="https://github.com/prl-mushr/mushr_base"><code>mushr_base</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：将所有 mushr 组件连接在一起的脚本。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模拟</font></font></h2><a id="user-content-simulation" class="anchor-element" aria-label="永久链接：模拟" href="#simulation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://github.com/prl-mushr/mushr_sim"><code>mushr_sim</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">: MuSHR 的主要模拟器</font></font></li>
+<li><a href="https://github.com/prl-mushr/mushr_mujoco_ros"><code>mushr_mujoco_ros</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：MuSHR 的 mujoco 模拟器。</font></font></li>
+<li><a href="https://github.com/prl-mushr/gym-donkeycar"><code>gym-donkeycar</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：MuSHR 版本的 Donkeycar 模拟器</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">硬件</font></font></h2><a id="user-content-hardware" class="anchor-element" aria-label="永久链接：硬件" href="#hardware"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://github.com/prl-mushr/mushr/tree/master/mushr_hardware/mushr_hardware"><code>mushr_hardware</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：用于运行汽车的启动文件和已安装硬件包的位置</font></font></li>
+<li><a href="https://github.com/prl-mushr/mushr/tree/master/mushr_description"><code>mushr_description</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：每个 mushr 平台的官方网格、stl 文件和 urdf。</font><font style="vertical-align: inherit;">还包含运动学汽车模型的描述</font></font></li>
+<li><a href="https://github.com/prl-mushr/mushr_cad"><code>mushr_cad</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：MuSHR 汽车所有版本的 CAD 文件</font></font></li>
+<li><a href="https://github.com/prl-mushr/push_button_utils"><code>push_button_utils</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：前保险杠ROS节点接口</font></font></li>
+<li><a href="https://github.com/prl-mushr/vesc"><code>vesc</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：与 MuSHR 汽车的 VESC 通信的代码</font></font></li>
+<li><a href="https://github.com/prl-mushr/ydlidar"><code>ydlidar</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：包含激光扫描仪所有代码的包</font></font></li>
+<li><a href="https://github.com/IntelRealSense/realsense-ros"><code>Realsense</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：用于与 RealSense 相机连接的外部封装</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实用程序和开发工具</font></font></h2><a id="user-content-utils-and-development-tools" class="anchor-element" aria-label="永久链接：实用程序和开发工具" href="#utils-and-development-tools"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://github.com/prl-mushr/devtools"><code>devtools</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：用于检查和为 MuSHR 做出贡献的开发工具</font></font></li>
+<li><a href="https://github.com/prl-mushr/mushr/tree/master/mushr_utils"><code>mushr_utils</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：安装脚本、rviz 安装文件和其他用于运行各种任务的实用程序</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自主导航</font></font></h2><a id="user-content-autonomous-navigation" class="anchor-element" aria-label="永久链接：自主导航" href="#autonomous-navigation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://github.com/prl-mushr/mushr_pf"><code>mushr_pf</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：用于在已知地图中定位的 MuSHR 粒子滤波器。</font></font></li>
+<li><a href="https://github.com/prl-mushr/mushr_pf.jl"><code>mushr_pf.jl</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：另一个用 julia 编写的 MuSHR 粒子过滤器</font></font></li>
+<li><a href="https://github.com/prl-mushr/mushr_rhc"><code>mushr_rhc</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：MuSHR 后退地平线控制器，用于在已知地图中导航。</font></font></li>
+<li><a href="https://github.com/prl-mushr/mushr_gp"><code>mushr_gp</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：MuSHR 全局规划器，用于在已知地图中进行规划。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">机器学习</font></font></h2><a id="user-content-machine-learning" class="anchor-element" aria-label="永久链接：机器学习" href="#machine-learning"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://github.com/prl-mushr/MUSHR-DL"><code>mushr-dl</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：驴模拟中用于强化学习的深度学习堆栈</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">常问问题</font></font></h2><a id="user-content-faq" class="anchor-element" aria-label="永久链接：常见问题解答" href="#faq"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我该如何开始？</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+访问我们的</font></font><a href="https://mushr.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">！</font><font style="vertical-align: inherit;">我们在那里有一个不断增长的教程和构建说明列表。</font></font></p>
+</li>
+<li>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">谁可以使用 MuSHR？</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+该项目面向本科生和研究生水平的学生和研究人员，但这并不意味着您不能这样做！</font><font style="vertical-align: inherit;">我们欢迎有积极性的高中生和创客也尝试该平台。</font><font style="vertical-align: inherit;">您需要熟悉 Linux 终端、Python 和一般构建技能。</font><font style="vertical-align: inherit;">构建平台不需要焊接技能。</font></font></p>
+</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">致谢</font></font></h2><a id="user-content-acknowledgements" class="anchor-element" aria-label="永久链接：致谢" href="#acknowledgements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该项目来自</font><a href="https://www.cs.washington.edu/" rel="nofollow"><font style="vertical-align: inherit;">华盛顿大学 Paul G. Allen 计算机科学学院</font></a><font style="vertical-align: inherit;">的</font></font><a href="https://personalrobotics.cs.washington.edu/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个人机器人实验室</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font><a href="https://www.cs.washington.edu/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">顾问：</font></font></strong> <a href="https://goodrobot.ai/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sidd Srinivasa </font></font></a><br>
+<strong><a href="https://personalrobotics.cs.washington.edu/people/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PRL 团队</font></font></a></strong></p>
+</article></div>
